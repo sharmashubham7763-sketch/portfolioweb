@@ -435,5 +435,26 @@ body.dark-mode .project-card p {
     color: #d1d5db;
 }
 
+#home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-image img {
+    width: 300px;
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid #2563eb;
+}
+
 
 
