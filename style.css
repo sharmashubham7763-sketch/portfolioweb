@@ -1,0 +1,439 @@
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    background-color: #111827;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    color: white;
+    font-size: 25px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #38bdf8;
+}
+
+
+/* =========================
+   COMMON SECTION
+========================= */
+
+section {
+    min-height: 70vh;
+    padding: 100px 8%;
+}
+
+
+/* =========================
+   HOME SECTION
+========================= */
+
+#home {
+    min-height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    background-color: #eaf6ff;
+}
+
+#home h1 {
+    font-size: 55px;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+#home h2 {
+    font-size: 28px;
+    color: #2563eb;
+    margin-bottom: 20px;
+}
+
+#home p {
+    max-width: 600px;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+    background-color: #2563eb;
+    color: white;
+
+    border: none;
+    padding: 13px 25px;
+
+    font-size: 16px;
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+#about {
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section > h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+    color: #111827;
+}
+
+#about p {
+    max-width: 700px;
+    font-size: 18px;
+    color: #555;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+#skills {
+    background-color: #f5f7fb;
+}
+
+#skills p {
+    display: inline-block;
+
+    background-color: white;
+
+    padding: 12px 25px;
+    margin: 8px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+#skills p:hover {
+    transform: translateY(-5px);
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+#projects {
+    background-color: white;
+}
+
+#projects div {
+    display: inline-block;
+
+    width: 300px;
+
+    margin: 15px;
+    padding: 25px;
+
+    background-color: #f5f7fb;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    vertical-align: top;
+
+    transition: 0.3s;
+}
+
+#projects div:hover {
+    transform: translateY(-8px);
+}
+
+#projects h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #2563eb;
+}
+
+#projects p {
+    color: #555;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+#contact {
+    min-height: 50vh;
+
+    background-color: #111827;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#contact h2 {
+    color: white;
+}
+
+#contact p {
+    font-size: 18px;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px 5%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    section {
+        padding: 70px 5%;
+    }
+
+    #home h1 {
+        font-size: 40px;
+    }
+
+    #home h2 {
+        font-size: 22px;
+    }
+
+    #home p {
+        font-size: 16px;
+    }
+
+    #projects div {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* DARK MODE */
+
+body.dark-mode {
+    background-color: #111827;
+    color: white;
+}
+
+body.dark-mode #home {
+    background-color: #1f2937;
+}
+
+body.dark-mode #home h1 {
+    color: white;
+}
+
+body.dark-mode #home p,
+body.dark-mode #about p,
+body.dark-mode #projects p {
+    color: #d1d5db;
+}
+
+body.dark-mode #about,
+body.dark-mode #projects {
+    background-color: #111827;
+}
+
+body.dark-mode #skills {
+    background-color: #1f2937;
+}
+
+body.dark-mode #skills p,
+body.dark-mode #projects div {
+    background-color: #374151;
+}
+
+#themeButton {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* =========================
+   PROJECT FILTER BUTTONS
+========================= */
+
+.filter-buttons {
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    background-color: #e5e7eb;
+    color: #111827;
+
+    margin: 5px;
+    padding: 10px 20px;
+
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.filter-btn:hover {
+    background-color: #2563eb;
+    color: white;
+}
+
+.filter-btn.active {
+    background-color: #2563eb;
+    color: white;
+}
+
+
+/* =========================
+   PROJECT CONTAINER
+========================= */
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+/* =========================
+   PROJECT CARD
+========================= */
+
+.project-card {
+    width: 300px;
+
+    padding: 25px;
+
+    background-color: #f5f7fb;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-card h3 {
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #555;
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode .filter-btn {
+    background-color: #374151;
+    color: white;
+}
+
+body.dark-mode .filter-btn.active {
+    background-color: #2563eb;
+}
+
+body.dark-mode .project-card {
+    background-color: #374151;
+}
+
+body.dark-mode .project-card p {
+    color: #d1d5db;
+}
+
+
+
